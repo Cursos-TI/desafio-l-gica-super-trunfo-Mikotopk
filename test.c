@@ -38,7 +38,7 @@ int main() {
                 scanf("%s", codigo_da_carta1);
 
                 printf("Digite o nome da cidade: \n");
-                scanf("%s", nome_da_cidade1);
+                scanf(" %[^\n]", nome_da_cidade1);
 
                 printf("Digite o número da população: \n");
                 scanf("%lu", &populacao1);
@@ -63,7 +63,7 @@ int main() {
                 scanf("%s", codigo_da_carta2);
 
                 printf("Digite o nome da cidade: \n");
-                scanf("%s", nome_da_cidade2);
+                scanf(" %[^\n]", nome_da_cidade2);
 
                 printf("Digite o número da população: \n");
                 scanf("%lu", &populacao2);
@@ -121,49 +121,20 @@ int main() {
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf("\n\n\n\nComparação de cartas(Atributo: Densidade pulacional):\n");
     printf("\nCarta 1 - ");
-    printf("Estado: %s,",nome_da_cidade1);
-    printf(" Código: %s%s,",estado1,codigo_da_carta1);
-    printf(" População: %lu\n",populacao1);
+    printf(" %s:",nome_da_cidade1);
+    printf(" %2.fhab/km²\n",densidade_populacional1);
     printf("Carta 2 - ");
-    printf("Estado: %s,",nome_da_cidade2);
-    printf(" Código: %s%s,",estado1,codigo_da_carta2);
-    printf(" População: %lu\n",populacao2);
+    printf(" %s:",nome_da_cidade2);
+    printf(" %2.fhab/km²\n",densidade_populacional2);
     printf("Resultado:");
-    if ( populacao1 > populacao2){
-        printf(" Cidade 1 é a vencedora!\n");
+    if ( densidade_populacional2> densidade_populacional2){
+        printf(" carta 1 %s Venceu!\n",nome_da_cidade1);
     } else {
-        printf(" Cidade 2 é a vencedora!\n");
+        printf(" carta 2 %s Venceu!\n",nome_da_cidade2);
     }
-    printf("\nCarta 1 - ");
-    printf("Estado: %s,",nome_da_cidade1);
-    printf(" Código: %s%s,",estado1,codigo_da_carta1);
-    printf(" Área: %.2f km²\n",area1);
-    printf("Carta 2 - ");
-    printf("Estado: %s,",nome_da_cidade2);
-    printf(" Código: %s%s,",estado1,codigo_da_carta2);
-    printf(" Área: %.2f km²\n",area2);
-    printf("Resultado:");
-    if ( area1 > area2){
-        printf(" Cidade 1 é a vencedora!\n");
-    } else {
-        printf(" Cidade 2 é a vencedora!\n");
-    
-    }
-    printf("\nCarta 1 - ");
-    printf("Estado: %s,",nome_da_cidade1);
-    printf(" Código: %s%s,",estado1,codigo_da_carta1);
-    printf("PIB: %.2f milhões\n",pib1);
-    printf("Carta 2 - ");
-    printf("Estado: %s,",nome_da_cidade2);
-    printf(" Código: %s%s,",estado1,codigo_da_carta2);
-    printf("PIB: %.2f milhões\n",pib2);
-    printf("Resultado:");
-    if ( pib1 > pib2){
-        printf(" Cidade 1 é a vencedora!\n");
-    } else {
-        printf(" Cidade 2 é a vencedora!\n");
-    }
+
 
 
 
